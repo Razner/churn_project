@@ -1,0 +1,106 @@
+# Etape 1 QUESTIONS : 
+
+1. Pourquoi séparer les fichiers ?
+Pour organiser le code et le rendre plus facile à comprendre.
+Chaque fichier a un rôle précis (charger les données, entraîner le modèle, etc.), donc c’est plus propre et plus facile à modifier.
+
+2. Pourquoi sauvegarder le modèle ?
+Pour éviter de le réentraîner à chaque fois.
+Une fois entraîné, on peut le réutiliser directement.
+
+3. Que se passe-t-il si les données changent ?
+Le modèle peut devenir moins performant, car il a appris sur d’anciennes données.
+Il faut donc le réentraîner avec les nouvelles données pour qu’il reste fiable.
+
+# Etape 2 QUESTION : 
+
+## Partie 1 :
+
+1. Définir une API
+Une API est un moyen de communication entre deux applications.
+Elle permet à un programme d’envoyer une requête à un autre pour récupérer ou envoyer des données.
+
+2. Différence GET / POST
+GET sert à récupérer des données.
+POST sert à envoyer des données.
+
+3. Pourquoi utiliser une API en ML ?
+Pour pouvoir utiliser le modèle facilement depuis une autre application.
+Ça évite de devoir relancer le code à chaque fois.  
+
+## Partie 2 :
+
+1. Qu’est-ce qu’un endpoint ?
+C'est une URL de l’API qui permet d’accéder à une fonction précise, comme faire une prédiction.
+
+2. Pourquoi utiliser POST ?
+POST sert à envoyer des données à l’API pour obtenir un résultat.
+
+3. Que fait Pydantic ?
+Pydantic vérifie que les données envoyées à l’API sont correctes.
+
+# Partie 3 : 
+
+CPU vs GPU :
+
+Churn -> CPU (modèle simple, peu de calculs)
+Deep learning -> GPU (beaucoup de calculs)
+
+Architecture :
+
+Utilisateur -> API -> Modèle -> Réponse
+
+Où est le modèle ?
+- Le modèle est chargé dans l’API
+
+Qui appelle l’API ?
+- L’utilisateur ou une application appelle l’API
+
+Base de données :
+
+Pourquoi stocker les données ?
+Pour garder les données et les prédictions
+
+Que stocker ?
+Les infos clients + résultats de prédiction
+
+Scalabilité :
+
+Pourquoi scaler ?
+Pour gérer beaucoup d’utilisateurs en même temps
+
+Que fait un load balancer ?
+Il répartit les requêtes sur plusieurs serveurs
+
+Cas TELCO :
+
+1. Quand utiliser le modèle ? (temps réel ou batch)
+Pour le churn, on privilégie le temps réel car on veut une prédiction immédiate lorsqu’un client est actif.
+
+2.  Que faire des clients à risque ?
+Les cibler avec des offres ou actions commerciales
+
+3. Où stocker les résultats ?
+Dans une base de données
+
+## Partie 4 :
+
+1. Quel contrat churn le plus ?
+Le contrat Month-to-month
+
+2. Qui sont les clients à risque ?
+Clients avec faible ancienneté (tenure faible) et factures élevées
+
+3. Recommandation business ?
+Proposer des réductions ou des contrats plus longs pour fidéliser
+
+# Partie 5 :
+
+Problème métier :
+L’entreprise perd des clients.
+
+Solution :
+Créer un modèle pour prédire les clients qui vont partir.
+
+Résultat :
+Le modèle permet d’anticiper le churn avec environ 80% de précision.
