@@ -20,7 +20,7 @@ page = st.sidebar.selectbox(
         "Analyse âge",
         "Analyse services",
         "Analyse support",
-        "Actions pour réduire le churn"   # <-- AJOUT
+        "Actions pour réduire le churn"   
     ]
 )
 
@@ -120,7 +120,7 @@ elif page == "Analyse support":
 
     st.write("Yes = support technique, No = pas de support")
 
-elif page == "Actions pour réduire le churn":   # <-- NOUVELLE SECTION
+elif page == "Actions pour réduire le churn":  
 
     st.header("Actions pour réduire le churn")
 
@@ -132,6 +132,7 @@ elif page == "Actions pour réduire le churn":   # <-- NOUVELLE SECTION
             "Fibre optique",
             "Absence de support technique",
             "Charges mensuelles élevées",
+            "Clients à risque"
         ],
         "Constat": [
             "Churn très élevé",
@@ -140,6 +141,7 @@ elif page == "Actions pour réduire le churn":   # <-- NOUVELLE SECTION
             "Churn le plus élevé parmi les types Internet",
             "Churn très élevé sans support",
             "Sensibilité au prix",
+            "Profil combinant plusieurs facteurs"
         ],
         "Action recommandée": [
             "Inciter à passer sur 12/24 mois (réductions, avantages)",
@@ -148,6 +150,7 @@ elif page == "Actions pour réduire le churn":   # <-- NOUVELLE SECTION
             "Améliorer qualité fibre : diagnostic, interventions rapides, dédommagements",
             "Support minimum gratuit, automatisation du support",
             "Offres personnalisées, remises temporaires",
+            "Campagnes ciblées sur les clients à risque"
         ]
     })
 
